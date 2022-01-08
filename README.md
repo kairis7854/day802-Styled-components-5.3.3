@@ -283,7 +283,7 @@ render(
 &:hover {} 移入後更改
 & ~ &  {} 相同組件，第一個以外的所有
 & + & {} 相同組件，第二個
-&.something {} claaaName名是 something 
+&.something {} className名是 something 
 .something-else & {} 父組件名是 something-else 
 ```
 ```js
