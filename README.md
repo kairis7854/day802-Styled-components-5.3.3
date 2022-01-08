@@ -16,8 +16,8 @@
 0.[開始](#開始)\
 1.[根據props調整](#根據props調整)\
 2.[擴展屬性](#擴展屬性)\
-3.[適用於任何組件(函數組件)](#適用於任何組件(函數組件))\
-3.[適用於 CSSModules(原生方式引入)](#適用於cssModules(原生方式引入))\
+3.[適用於任何組件，如函數組件](#適用於任何組件，如函數組件)\
+4.[適用於cssModules，如原生方式引入](#適用於cssModules，如原生方式引入)\
 5.[定義位置](#定義位置)\
 6.[偽類、選擇器使用](#偽類、選擇器使用)\
 7.[createGlobalStyle使用](#createGlobalStyle使用)\
@@ -165,7 +165,7 @@ render(
 //補充：children 是內容，這裡可以用js來更改
 ```
 ↑  `as` 屬性也能添加另一種css組件特性\
-## 適用於任何組件(將函數組件套用cssInJs)
+## 適用於任何組件，如函數組件
 ```js
 // This could be react-router-dom's Link for example
 const Link = ({ className, children }) => (
@@ -189,7 +189,7 @@ render(
 //補充，html標籤名也可以這樣使用 styled("div") 
 ```
 ↑ 函數造出來的組件，也能用 styled 函數包裹賦予 css組件特性
-## 4.適用於 CSSModules(原生方式引入)
+## 適用於cssModules，如原生方式引入
 ```js
 import React from 'react'
 import styles from './styles.css'
@@ -216,7 +216,7 @@ export default class Counter extends React.Component {
 }
 ```
 ↑ className裡，加入 styles. 調用原生css
-## 5.定義位置
+## 定義位置
 ```js
 const StyledWrapper = styled.div`
   /* ... */
@@ -239,7 +239,7 @@ const Wrapper = ({ message }) => {
 ```
 ↑ 劣
 
-## 6.偽類、選擇器使用
+## 偽類、選擇器使用
 ```js
 const Thing = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
   color: blue;
@@ -304,7 +304,7 @@ render(
 )
 ```
 ↑ className 定義於子組件
-## 7.createGlobalStyle使用
+## createGlobalStyle使用
 
 ```js
 //引入
@@ -333,7 +333,7 @@ render(
 )
 ```
 ↑ createGlobalStyle 定義全局樣式，影響範圍為全局，包含非 styled-components 的 html 標籤。
-## 8.attrs使用
+## attrs使用
 ```js
 const Input = styled.input.attrs(props => ({
   // we can define static props
@@ -390,7 +390,7 @@ render(
 );
 ```
 ↑ attrs 傳值方式，由底層傳至上層。先加載 Input 再加載 PasswordInput。
-## 9.動畫使用
+## 動畫使用
 ```js
 // Create the keyframes
 const rotate = keyframes`
@@ -433,7 +433,7 @@ const styles = css`
 //注意：v3(含)以下版本，升級v4時請以模板字符串方式引入動畫
 ```
 ↑ 補充
-## 10.React Native 使用
+## React Native 使用
 ```js
 import React from 'react'
 import styled from 'styled-components/native'
