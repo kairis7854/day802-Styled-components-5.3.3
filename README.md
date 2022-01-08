@@ -16,10 +16,10 @@
 0.[開始](#開始)\
 1.[根據props調整](#根據props調整)\
 2.[擴展屬性](#擴展屬性)\
-3.[適用於任何組件，如函數組件](#適用於任何組件，如函數組件)\
-4.[適用於cssModules，如原生方式引入](#適用於cssModules，如原生方式引入)\
+3.[適用於任何組件 如函數組件](#適用於任何組件-如函數組件)\
+4.[適用於cssModules 如原生方式引入](#適用於cssModules-如原生方式引入)\
 5.[定義位置](#定義位置)\
-6.[偽類、選擇器使用](#偽類、選擇器使用)\
+6.[偽類 選擇器使用](#偽類-選擇器使用)\
 7.[createGlobalStyle使用](#createGlobalStyle使用)\
 8.[attrs使用](#attrs使用)\
 9.[動畫使用](#動畫使用)\
@@ -165,7 +165,7 @@ render(
 //補充：children 是內容，這裡可以用js來更改
 ```
 ↑  `as` 屬性也能添加另一種css組件特性\
-## 適用於任何組件，如函數組件
+## 適用於任何組件 如函數組件
 ```js
 // This could be react-router-dom's Link for example
 const Link = ({ className, children }) => (
@@ -189,7 +189,7 @@ render(
 //補充，html標籤名也可以這樣使用 styled("div") 
 ```
 ↑ 函數造出來的組件，也能用 styled 函數包裹賦予 css組件特性
-## 適用於cssModules，如原生方式引入
+## 適用於cssModules 如原生方式引入
 ```js
 import React from 'react'
 import styles from './styles.css'
@@ -239,7 +239,7 @@ const Wrapper = ({ message }) => {
 ```
 ↑ 劣
 
-## 偽類、選擇器使用
+## 偽類 選擇器使用
 ```js
 const Thing = styled.div.attrs((/* props */) => ({ tabIndex: 0 }))`
   color: blue;
