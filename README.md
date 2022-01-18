@@ -30,6 +30,7 @@
 
 參考\
 1.[CreateGlobalStyle 消除默認樣式與全局設定](#CreateGlobalStyle-消除默認樣式與全局設定)
+2.[插件 vscode-styled-components](#插件 vscode-styled-components)
 
 ## 安装
 ```
@@ -503,7 +504,6 @@ const theme = {
 render(
   <div>
     <Button>Normal</Button>
-
     <ThemeProvider theme={theme}>
       <Button>Themed</Button>
     </ThemeProvider>
@@ -514,12 +514,16 @@ render(
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {ThemeProvider} from `style-components`
+import {ThemeProvider} from 'styled-components'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const theme = {
-  primary:'red'
+  primary:'red',
+  colors:{
+    head:'red',
+    body:'blue',
+  }
 }
 
 ReactDOM.render(
@@ -535,8 +539,12 @@ ReactDOM.render(
 const Button = styled.div`
   background:${props => props.theme.primary }
 `;
+const AnotherButton = styled.div`
+  background:${({theme}) => theme.colors.head }
+`;
+//theme也能寫成函式
 ```
-↑ 舉例
+↑ 進階舉例
 
 
 ## 參考
@@ -551,7 +559,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
 }
@@ -647,7 +655,23 @@ class App extends Component {
     );
   }
 }
+
 ```
 ↑ 引入。實際的cra項目中，全局樣式不應該寫在App.js裡，而應該寫在index.js裡
+```js
+//引入google字形方法
+export const GlobalStyle = createGlobalStyle`
+
+ @import url('http://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+  *{
+    font-family: 'Poppins',sans-serif;
+  }
+`;
+//並刪除 Normalize 的 font: inherit;
+```
+↑ 補充，引入google字形
 
 參考：https://medium.com/itsoktomakemistakes/%E4%BD%BF%E7%94%A8-createglobalstyle-%E5%9C%A8-react-styled-components-%E5%8F%96%E4%BB%A3-css-reset-%E8%88%87-css-normalize-fc8faa8059f1
+
+## 插件 vscode-styled-components
+建議搭配插件 vscode-styled-components
