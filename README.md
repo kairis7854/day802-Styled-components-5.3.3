@@ -1,8 +1,8 @@
 # Styled-components 5.3.3
 
 ## DEMO
-連結：
-
+連結：https://kairis7854.github.io/day802-Styled-components-5.3.3/
+![image](Readme.png)
 <br>
 
 
@@ -675,3 +675,15 @@ export const GlobalStyle = createGlobalStyle`
 
 ## 插件 vscode-styled-components
 建議搭配插件 vscode-styled-components
+
+## 筆記：github 發佈
+Package.json 裡添加 \
+"homepage": "https://kairis7854.github.io/day802-Styled-components-5.3.3/",
+
+npm install gh-pages --save-dev
+
+Package.json > scripts裡添加 \
+"predeploy": "npm run build",\
+"deploy": "gh-pages -d build"
+
+npm run deploy
