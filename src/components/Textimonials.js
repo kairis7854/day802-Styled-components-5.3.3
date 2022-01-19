@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Title, TitleText } from './atomic'
 import bg2 from '../assets/image/bg2.jpg'
 import testi1 from '../assets/image/testi1.jpg'
 import testi2 from '../assets/image/testi2.jpg'
@@ -8,8 +9,8 @@ import testi3 from '../assets/image/testi3.jpg'
 function Textimonials() {
     return (
         <TextimonialsWrap id='testimonials' bg={bg2}>
-            <Title>
-                <TitleText>They <span>S</span>aid About Us</TitleText>
+            <Title pColor='#fff'>
+                <TitleText color='white'>They <span>S</span>aid About Us</TitleText>
                 <p>Lorem ipsum dolor sit amet, consecteur adipisicing elit.</p>
             </Title>
             <Content>
@@ -53,26 +54,6 @@ const TextimonialsWrap = styled.div`
     padding: 100px;
     @media (max-width:991px){
         padding:82px 20px 20px;
-    }
-`
-const Title = styled.div`
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    p{
-        color:#fff;
-    }
-`
-const TitleText = styled.div`
-    color:#fff;
-    font-size:2em;
-    font-weight:300;
-    span{
-        color:#ff0157;
-        font-weight: 700;
-        font-size: 1.5em;
     }
 `
 const Content = styled.div`

@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Wrap, TitleText, ImgBoxMedia991 } from './atomic'
 import img1 from '../assets/image/img1.jpg'
 
 function About() {
     return (
-        <AboutWrap id='about'>
+        <Wrap id='about'>
             <Row>
                 <Col50>
                     <TitleText>
@@ -20,7 +21,7 @@ function About() {
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         <br />
                         <br />
-                         Lorem ipsum
+                        Lorem ipsum
                         dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -28,24 +29,17 @@ function About() {
                     </p>
                 </Col50>
                 <Col50>
-                    <ImgBox >
+                    <ImgBoxMedia991 >
                         <img src={img1} alt="" />
-                    </ImgBox>
+                    </ImgBoxMedia991>
                 </Col50>
             </Row>
-        </AboutWrap>
+        </Wrap>
     )
 }
 
 export default About
 
-
-const AboutWrap = styled.div`
-    padding:100px;
-    @media (max-width:991px){
-        padding:82px 20px 20px;
-    }
-`
 const Row = styled.div`
     position:relative;
     width: 100%;
@@ -62,32 +56,4 @@ const Col50 = styled.div`
         width: 100%;
     }
 `
-const TitleText = styled.div`
-    color:#111;
-    font-size:2em;
-    font-weight:300;
-    span{
-        color:#ff0157;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
-`
-const ImgBox = styled.div`
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-    }
 
-    @media (max-width:991px){
-        height: 300px;
-        margin-top: 20px;
-    }
-`

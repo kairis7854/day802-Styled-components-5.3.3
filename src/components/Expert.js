@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Wrap, Title, ImgBox, TitleTextMedia991 } from './atomic'
 import expert1 from '../assets/image/expert1.jpg'
 import expert2 from '../assets/image/expert2.jpg'
 import expert3 from '../assets/image/expert3.jpg'
@@ -7,9 +8,9 @@ import expert4 from '../assets/image/expert4.jpg'
 
 function Expert() {
     return (
-        <ExpertWrap id='expert'>
-            <Title>
-                <TitleText>Our Kitchen <span>E</span>xpert</TitleText>
+        <Wrap id='expert'>
+            <Title textAlign='center'>
+                <TitleTextMedia991>Our Kitchen <span>E</span>xpert</TitleTextMedia991>
                 <p>dolor sit amet, consectetur adipisicing elit</p>
             </Title>
             <Content>
@@ -46,43 +47,12 @@ function Expert() {
                     </Text>
                 </Box>
             </Content>
-        </ExpertWrap>
+        </Wrap>
     )
 }
 
 export default Expert
 
-const ExpertWrap = styled.div`
-    padding:100px;
-    @media (max-width:991px){
-        padding:82px 20px 20px;
-    }
-`
-const Title = styled.div`
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    @media (max-width:991px){
-        text-align: center;
-    }
-`
-const TitleText = styled.div`
-    color:#111;
-    font-size:2em;
-    font-weight:300;
-    span{
-        color:#ff0157;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
-    @media (max-width:991px){
-        font-size:1.8em;
-        line-height: 1.5em;
-        margin-bottom: 15px;
-    }
-`
 const Content = styled.div`
     display: flex;
     justify-content:center;
@@ -93,19 +63,6 @@ const Content = styled.div`
 const Box = styled.div`
     width: 250px;
     margin:15px;
-`
-const ImgBox = styled.div`
-    position:relative;
-    width: 100%;
-    height: 300px;
-    img{
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-    }
 `
 const Text = styled.div`
     padding:15px 0 5px ;

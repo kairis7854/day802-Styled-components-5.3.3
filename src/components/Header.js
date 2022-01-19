@@ -6,7 +6,7 @@ import close from '../assets/image/close.png'
 
 function Header() {
     const [headerState, setHeaderState] = useState(false)
-    const [menuToggleState,setMenuToggleState] = useState(false)
+    const [menuToggleState, setMenuToggleState] = useState(false)
 
     useEffect(() => {
         const onScroll = () => {
@@ -29,14 +29,14 @@ function Header() {
     return (
         <HeaderWrap state={headerState}>
             <Logo state={headerState}>Food<span>.</span></Logo>
-            <MenuToggle menuToggleState={menuToggleState} headerState={headerState} onClick={()=>{setMenuToggleState(!menuToggleState)}}></MenuToggle>
+            <MenuToggle menuToggleState={menuToggleState} headerState={headerState} onClick={() => { setMenuToggleState(!menuToggleState) }}></MenuToggle>
             <Navigation headerState={headerState} menuToggleState={menuToggleState}>
-                <li onClick={() => { scrollToAnchor('home') ;setMenuToggleState(!menuToggleState)}}>Home</li>
-                <li onClick={() => { scrollToAnchor('about') ;setMenuToggleState(!menuToggleState)}}>About</li>
-                <li onClick={() => { scrollToAnchor('menu') ;setMenuToggleState(!menuToggleState)}}>Menu</li>
-                <li onClick={() => { scrollToAnchor('expert') ;setMenuToggleState(!menuToggleState)}}>Expert</li>
-                <li onClick={() => { scrollToAnchor('testimonials') ;setMenuToggleState(!menuToggleState)}}>Testimonials</li>
-                <li onClick={() => { scrollToAnchor('contact') ;setMenuToggleState(!menuToggleState)}}>Contact</li>
+                <li onClick={() => { scrollToAnchor('home'); setMenuToggleState(!menuToggleState) }}>Home</li>
+                <li onClick={() => { scrollToAnchor('about'); setMenuToggleState(!menuToggleState) }}>About</li>
+                <li onClick={() => { scrollToAnchor('menu'); setMenuToggleState(!menuToggleState) }}>Menu</li>
+                <li onClick={() => { scrollToAnchor('expert'); setMenuToggleState(!menuToggleState) }}>Expert</li>
+                <li onClick={() => { scrollToAnchor('testimonials'); setMenuToggleState(!menuToggleState) }}>Testimonials</li>
+                <li onClick={() => { scrollToAnchor('contact'); setMenuToggleState(!menuToggleState) }}>Contact</li>
             </Navigation>
         </HeaderWrap>
     )
@@ -76,12 +76,12 @@ const MenuToggle = styled.div`
         position:relative;
         width: 40px;
         height: 40px;
-        background-image: ${ props => props.menuToggleState ? `url(${close})` : `url(${menu})`};
-        background-size: ${ props => props.menuToggleState ? '25px' : '30px'};
+        background-image: ${props => props.menuToggleState ? `url(${close})` : `url(${menu})`};
+        background-size: ${props => props.menuToggleState ? '25px' : '30px'};
         background-repeat: no-repeat;
         background-position: center;
         cursor:pointer;
-        filter: ${ props => props.headerState ? 'invert(1)' : null};
+        filter: ${props => props.headerState ? 'invert(1)' : null};
     }
 `
 const Navigation = styled.div`

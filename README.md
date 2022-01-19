@@ -29,8 +29,8 @@
 1.[主題](#主題)
 
 參考\
-1.[CreateGlobalStyle 消除默認樣式與全局設定](#CreateGlobalStyle-消除默認樣式與全局設定)
-2.[插件 vscode-styled-components](#插件 vscode-styled-components)
+1.[CreateGlobalStyle 消除默認樣式與全局設定](#CreateGlobalStyle-消除默認樣式與全局設定)\
+2.[插件 vscode-styled-components](#插件-vscode-styled-components)
 
 ## 安装
 ```

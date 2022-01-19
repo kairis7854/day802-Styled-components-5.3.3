@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ResetStyle, GlobalStyle } from './components/globalStyle'
-import  {ThemeProvider}  from 'styled-components'
+import { ThemeProvider } from 'styled-components'
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,9 +9,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
 	<React.StrictMode>
 		{/* <ThemeProvider theme={null}> */}
-			<ResetStyle />
-			<GlobalStyle />
-			<App />
+		<ResetStyle />
+		<GlobalStyle />
+		<App />
 		{/* </ThemeProvider> */}
 	</React.StrictMode>,
 	document.getElementById('root')

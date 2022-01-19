@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function CopyrightText() {
     return (
         <CopyRightTextWrap>
-            <p>Copyright 2022 <a href='&nbsp;'>Kawauso</a>. All Right Reserved</p>
+            <p>Copyright 2022 <a href='https://kairis7854.github.io/day802-Styled-components-5.3.3/'>Kawauso</a>. All Right Reserved</p>
         </CopyRightTextWrap>
     )
 }

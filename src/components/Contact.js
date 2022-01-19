@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { TitleText } from './atomic'
 import bg3 from '../assets/image/bg3.jpg'
 
 function Contact() {
@@ -44,16 +45,6 @@ const Title = styled.div`
     justify-content:center;
     align-items:center;
     flex-direction:column;
-`
-const TitleText = styled.div`
-    color:#111;
-    font-size:2em;
-    font-weight:300;
-    span{
-        color:#ff0157;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
 `
 const ContactForm = styled.div`
     padding:75px 50px;

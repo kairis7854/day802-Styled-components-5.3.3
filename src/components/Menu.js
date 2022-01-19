@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Wrap, Title, TitleText, ImgBox } from './atomic'
 import menu1 from '../assets/image/menu1.jpg'
 import menu2 from '../assets/image/menu2.jpg'
 import menu3 from '../assets/image/menu3.jpg'
@@ -11,7 +12,7 @@ import menu6 from '../assets/image/menu6.jpg'
 
 function Menu() {
     return (
-        <MenuWrap id='menu'>
+        <Wrap id='menu'>
             <Title>
                 <TitleText>Our <span>M</span>enu</TitleText>
                 <p>dolor sit amet, consectetur adipisicing elit</p>
@@ -69,35 +70,12 @@ function Menu() {
             <Title>
                 <Btn>View All</Btn>
             </Title>
-        </MenuWrap>
+        </Wrap>
     )
 }
 
 export default Menu
 
-const MenuWrap = styled.div`
-    padding:100px;
-    @media (max-width:991px){
-        padding:82px 20px 20px;
-    }
-`
-const Title = styled.div`
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-`
-const TitleText = styled.div`
-    color:#111;
-    font-size:2em;
-    font-weight:300;
-    span{
-        color:#ff0157;
-        font-weight: 700;
-        font-size: 1.5em;
-    }
-`
 const Content = styled.div`
     display: flex;
     justify-content:center;
@@ -117,19 +95,7 @@ const Box = styled.div`
         margin:10px;
     }
 `
-const ImgBox = styled.div`
-    position:relative;
-    width: 100%;
-    height: 300px;
-    img{
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-    }
-`
+
 const Text = styled.div`
     padding:15px 0 5px ;
     h3{
